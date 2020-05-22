@@ -847,6 +847,8 @@ paths:
                   type: boolean
                 '':
                   type: boolean
+      tags:
+        - poi
     parameters: []
   '/poiRepresentations/{id}':
     get:
@@ -913,6 +915,8 @@ paths:
                   type: boolean
                 enabled:
                   type: boolean
+      tags:
+        - poi
     delete:
       summary: ''
       operationId: deletePoi
@@ -926,6 +930,8 @@ paths:
         '404':
           description: Not Found
       description: Delete Poi
+      tags:
+        - poi
   /poiProfiles:
     get:
       summary: Your GET endpoint
@@ -1001,6 +1007,8 @@ paths:
                     type: string
                 tmsProfileId:
                   type: string
+      tags:
+        - poiProfile
   '/poiProfiles/{id}':
     parameters:
       - schema:
@@ -1054,6 +1062,8 @@ paths:
                     type: string
                 tmsProfileId:
                   type: string
+      tags:
+        - poiProfile
     delete:
       summary: ''
       operationId: deletPoiProfileId
@@ -1067,6 +1077,8 @@ paths:
         '404':
           description: Not Found
       description: Delete a Poi Profile
+      tags:
+        - poiProfile
 components:
   schemas: {}
 tags:
