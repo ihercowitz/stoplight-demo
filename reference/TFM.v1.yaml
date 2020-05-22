@@ -783,7 +783,7 @@ paths:
       description: Create a store
   /poiRepresentations:
     get:
-      summary: Your GET endpoint
+      summary: Get Pois
       tags:
         - poi
       responses:
@@ -852,7 +852,7 @@ paths:
     parameters: []
   '/poiRepresentations/{id}':
     get:
-      summary: Your GET endpoint
+      summary: Get a POI
       tags:
         - poi
       responses:
@@ -934,7 +934,7 @@ paths:
         - poi
   /poiProfiles:
     get:
-      summary: Your GET endpoint
+      summary: Get Poi Profiles
       tags:
         - poiProfile
       responses:
@@ -1017,7 +1017,7 @@ paths:
         in: path
         required: true
     get:
-      summary: Your GET endpoint
+      summary: Get a Poi Profile
       tags:
         - poiProfile
       responses:
