@@ -784,7 +784,8 @@ paths:
   /poiRepresentations:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - poi
       responses:
         '200':
           description: OK
@@ -850,7 +851,8 @@ paths:
   '/poiRepresentations/{id}':
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - poi
       responses:
         '200':
           description: OK
@@ -927,7 +929,8 @@ paths:
   /poiProfiles:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - poiProfile
       responses:
         '200':
           description: OK
@@ -1007,7 +1010,8 @@ paths:
         required: true
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - poiProfile
       responses:
         '200':
           description: OK
