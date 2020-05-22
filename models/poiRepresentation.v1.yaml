@@ -1,0 +1,33 @@
+title: poiRepresentation.v1
+type: object
+properties:
+  id:
+    type: string
+  terminalId:
+    type: string
+  fleetId:
+    type: string
+  storeId:
+    type: string
+  storeGroupId:
+    type: string
+  platformId:
+    type: string
+  toDeploy:
+    type: boolean
+  enabled:
+    type: boolean
+  configurationStatus:
+    type: string
+    enum:
+      - LOCALLY_MODIFIED
+      - AVAILABLE_TO_POI
+  lastContact:
+    type: string
+  sn:
+    type: string
+  state:
+    type: string
+    enum:
+      - NEW
+      - IN USE

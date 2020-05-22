@@ -1,0 +1,25 @@
+title: poiProfile.v1
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  fleetId:
+    type: string
+  acceptanceServicesIds:
+    type: array
+    items:
+      type: string
+  applicationIds:
+    type: array
+    items:
+      type: string
+  selectors:
+    type: array
+    items:
+      type: string
+  tmsProfileId:
+    type: string
+  notes:
+    type: string
