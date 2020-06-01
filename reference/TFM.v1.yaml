@@ -284,9 +284,12 @@ paths:
               schema:
                 allOf:
                   - $ref: ../models/paginatedList.v1.yaml
-                  - type: array
-                    items:
-                      $ref: ../models/solutionContract.v1.yaml
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: ../models/solutionContract.v1.yaml
         '403':
           description: Forbidden
         '404':
@@ -419,9 +422,12 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - type: array
-                    items:
-                      $ref: ../models/storeGroup.v1.yaml
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: ../models/storeGroup.v1.yaml
                   - $ref: ../models/paginatedList.v1.yaml
         '401':
           description: Unauthorized
@@ -732,9 +738,12 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - type: array
-                    items:
-                      $ref: ../models/store.v1.yaml
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: ../models/store.v1.yaml
                   - $ref: ../models/paginatedList.v1.yaml
         '401':
           description: Unauthorized
@@ -792,7 +801,15 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/poiRepresentation.v1.yaml
+                allOf:
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: ../models/poiRepresentation.v1.yaml
+                  - $ref: ../models/paginatedList.v1.yaml
+
           headers: {}
       operationId: getPois
       description: Get the list of Pois
@@ -943,22 +960,14 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  items:
-                    type: array
-                    items:
-                      $ref: ../models/poiProfile.v1.yaml
-                  totalPage:
-                    type: integer
-                  last:
-                    type: boolean
-                  totalItems:
-                    type: integer
-                  size:
-                    type: integer
-                  number:
-                    type: integer
+                allOf:
+                  - type: object
+                    properties:
+                      items:
+                        type: array
+                        items:
+                          $ref: ../models/poiProfile.v1.yaml
+                  - $ref: ../models/paginatedList.v1.yaml
       operationId: get-poiProfiles
       parameters:
         - schema:
