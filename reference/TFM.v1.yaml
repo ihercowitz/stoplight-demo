@@ -1094,7 +1094,8 @@ paths:
   /poiGroups:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - poiGroups
       responses: {}
       operationId: get-poiGroups
       requestBody:
@@ -1126,6 +1127,8 @@ paths:
         - schema:
             type: string
           in: header
+      tags:
+        - poiGroups
   '/poiGroups/{id}':
     parameters:
       - schema:
@@ -1135,7 +1138,8 @@ paths:
         required: true
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - poiGroups
       responses:
         '200':
           description: OK
@@ -1169,6 +1173,8 @@ paths:
           application/json:
             schema:
               $ref: ../models/poiGroup.v1.yaml
+      tags:
+        - poiGroups
     delete:
       summary: ''
       operationId: delete-poiGroups-id
@@ -1181,6 +1187,8 @@ paths:
           description: Unauthorized
         '403':
           description: Forbidden
+      tags:
+        - poiGroups
   /activePoiProfiles:
     get:
       summary: Your GET endpoint
