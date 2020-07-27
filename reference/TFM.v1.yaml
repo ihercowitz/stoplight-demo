@@ -1266,6 +1266,96 @@ paths:
           description: Forbidden
         '404':
           description: Not Found
+  /activePoiProperties:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: ../models/activePoiProperty.v1.yaml
+                  - $ref: ../models/paginatedList.v1.yaml
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+      operationId: get-activePoiProperties
+    post:
+      summary: ''
+      operationId: post-activePoiProperties
+      responses:
+        '201':
+          description: Created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/activePoiProperty.v1.yaml
+  '/activePoiProperties/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/activePoiProperty.v1.yaml
+      operationId: get-activePoiProperties-id
+    put:
+      summary: ''
+      operationId: put-activePoiProperties-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/activePoiProperty.v1.yaml
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+    delete:
+      summary: ''
+      operationId: delete-activePoiProperties-id
+      responses:
+        '204':
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
 components:
   schemas: {}
 tags:
