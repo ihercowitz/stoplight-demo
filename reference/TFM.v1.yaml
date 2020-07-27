@@ -1213,6 +1213,8 @@ paths:
           application/json:
             schema:
               $ref: ../models/activePoiProfile.v1.yaml
+      tags:
+        - activePoiProfiles
   '/activePoiProfiles/{id}':
     parameters:
       - schema:
@@ -1256,6 +1258,8 @@ paths:
             schema:
               $ref: ../models/activePoiProfile.v1.yaml
         description: ''
+      tags:
+        - activePoiProfiles
     delete:
       summary: ''
       operationId: delete-activePoiProfiles-id
@@ -1268,6 +1272,9 @@ paths:
           description: Forbidden
         '404':
           description: Not Found
+      tags:
+        - activePoiProfiles
+      description: ''
   /activePoiProperties:
     get:
       summary: Your GET endpoint
@@ -1298,6 +1305,8 @@ paths:
           application/json:
             schema:
               $ref: ../models/activePoiProperty.v1.yaml
+      tags:
+        - activePoiProperties
   '/activePoiProperties/{id}':
     parameters:
       - schema:
@@ -1343,6 +1352,8 @@ paths:
           description: Forbidden
         '404':
           description: Not Found
+      tags:
+        - activePoiProperties
     delete:
       summary: ''
       operationId: delete-activePoiProperties-id
@@ -1360,6 +1371,8 @@ paths:
           description: Unauthorized
         '403':
           description: Forbidden
+      tags:
+        - activePoiProperties
 components:
   schemas: {}
 tags:
