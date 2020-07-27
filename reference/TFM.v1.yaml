@@ -1184,7 +1184,8 @@ paths:
   /activePoiProfiles:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - activePoiProfiles
       responses:
         '200':
           description: OK
@@ -1221,7 +1222,8 @@ paths:
         required: true
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - activePoiProfiles
       responses:
         '200':
           description: OK
@@ -1269,7 +1271,8 @@ paths:
   /activePoiProperties:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - activePoiProperties
       responses:
         '200':
           description: OK
@@ -1304,7 +1307,8 @@ paths:
         required: true
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - activePoiProperties
       responses:
         '200':
           description: OK
